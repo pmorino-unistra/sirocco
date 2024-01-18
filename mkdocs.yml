@@ -1,11 +1,22 @@
 site_name: Documentation Sirocco
+
+nav:
+- Accueil : index.md
+- Demo : doc_exemple.md
+- SIDGFC : 
+  - SIDGFC : sidgfc/sidgfc.md
+  - Indicateurs : sidgfc/sidgfc_indicateurs.md
+
 theme: 
   name: material
   features:
     - navigation.tabs
     - navigation.sections
-    - toc.integrate
+    - navigation.tracking
+    - navigation.expand
+    - navigation.path
     - navigation.top
+    - toc.follow
     - search.suggest
     - search.highlight
     - content.tabs.link
@@ -18,7 +29,7 @@ theme:
         icon: material/toggle-switch-off-outline 
         name: Switch to dark mode
       primary: teal
-      accent: purple 
+      accent: green 
     - scheme: slate 
       toggle:
         icon: material/toggle-switch
@@ -42,3 +53,7 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+  - toc:
+      permalink: true
+      separator: "_"
+      title: "Table of Contents"
